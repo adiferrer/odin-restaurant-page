@@ -1,1 +1,2 @@
-console.log('Hello World');
+import _ from 'lodash';
+import './style.css';
