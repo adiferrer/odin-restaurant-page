@@ -1,4 +1,15 @@
 /* Path: src/style.css */
+@font-face {
+    font-family: 'Open Sauce';
+    src: url('./assets/fonts/opensauce.woff2') format('woff2'),
+      url('./assets/fonts/opensauce.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Garet';
+    src: url('./assets/fonts/garet.woff2') format('woff2'),
+      url('./assets/fonts/garet.woff') format('woff');
+}
 
 :root {
     --dark-brown: rgb(87,39,19);
@@ -7,13 +18,15 @@
 }
 
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
+    width: 100vw;
     position: absolute;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sauce', sans-serif;
+    font-size: 1.2rem;
 }
 
 header,
@@ -25,7 +38,7 @@ nav > ul {
 header {
     background-color: var(--dark-brown);
     color: var(--dirty-white);
-    padding: 1.2rem;
+    padding: 0.65rem 1rem;
 
     justify-content: space-between;
 }
@@ -38,47 +51,120 @@ nav > ul {
 nav > ul {
     cursor: pointer;
     list-style: none;
-    gap: 1.5rem;
+    gap: 3rem;
+    font-size: 1.3rem;
 }
 
-#content {
-    display: grid;
-    grid-template: repeat(4, 1fr) / 100vw;
-    place-items: center;
+nav > ul > li {
+    letter-spacing: 1px;
 }
 
-#content > section {
-    width: 100%;    
-    height: 80vh;
+.active {
+    color: var(--dark-brown);
+    background-color: var(--dirty-white);
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
 }
 
-#image-header > div {
-    position: absolute;
-    top: calc(100vh - 39vh);
-    left: calc(100vw - 34vw);
-}
-
-#background,
-#qualities,
-#content > section:nth-of-type(4) {
+/* home page content */
+#home-content {
     display: flex;
-}
-
-#background,
-#content > section:nth-of-type(4) {
-    align-items: center;
-}
-
-#qualities {
-    background-color: var(--tan);
     flex-direction: column;
     justify-content: center;
 }
 
-#qualities > div {
+#home-content h1,
+#home-content h2 {
+    font-family: 'Garet', sans-serif;
+}
+
+#home-content h2  {
+    font-size: 2rem;
+}
+
+#image-header,
+#about,
+#qualities,
+#address {
+    height: 80vh;
+}
+
+#image-header {
+    background-image: url('./assets/images/imageHeader.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(87,39,19,.2);
+}
+
+#image-header > div {
+    width: max-content;
+    color: var(--dirty-white);
+    position: absolute;
+    top: calc(100vh - 41vh);
+    left: calc(100vw - 36vw);
+    line-height: 2;
+}
+
+#image-header h1 {
+    font-size: 4rem;
+}
+
+#about,
+#address {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about > div,
+#address > div {
+    width: 40%;
+}
+
+#about > div > p,
+#address > div > p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#about {
+    padding: 3em 0 3em 5em;
+}
+
+#about > img,
+#address > img {
+    width: 50%;
+}
+
+#qualities {
+    padding: 3em 5em;
+    background-color: var(--tan);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
+}
+
+#qualities > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.quality > p {
+    margin-top: 1rem;
+}
+
+.quality > img {
+    width: 90%;
+}
+
+#address {
+    padding: 3em 5em 3em 0;
+}
+
+#address > img {
+    object-position: 50% 50%;
 }
 
 footer {
@@ -96,3 +182,5 @@ footer > a {
 footer > a:hover {
     text-decoration: underline;
 }
+
+/* media queries */
