@@ -5,26 +5,24 @@ import homePage from './home';
 
 // for header
 const header = document.createElement('header');
-const logoDiv = document.createElement('div');
-header.appendChild(logoDiv);
-
 const nav = document.createElement('nav');
 const ul = document.createElement('ul');
 for (let i = 1; i <= 3; i += 1) {
   const li = document.createElement('li');
+  const btn = document.createElement('button');
   if (i == 1) {
-    li.innerHTML = 'Home';
-    li.setAttribute('id', 'home-tab');
+    btn.innerHTML = 'Home';
+    btn.setAttribute('id', 'home-tab');
   }
   if (i == 2) {
-    li.innerHTML = 'Menu';
-    li.setAttribute('id', 'menu-tab');
+    btn.innerHTML = 'Menu';
+    btn.setAttribute('id', 'menu-tab');
   }
   if (i == 3) {
-    li.innerHTML = 'Contact';
-    li.setAttribute('id', 'contact-tab');
+    btn.innerHTML = 'Contact';
+    btn.setAttribute('id', 'contact-tab');
   }
-
+  li.appendChild(btn);
   ul.appendChild(li);
 }
 nav.appendChild(ul);

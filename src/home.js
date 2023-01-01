@@ -1,9 +1,9 @@
 // import _ from 'lodash';
 import About from './assets/images/about.jpeg';
 import Address from './assets/images/address.jpeg';
-import Quality1 from './assets/images/quality1.jpeg';
-import Quality2 from './assets/images/quality2.jpeg';
-import Quality3 from './assets/images/quality3.jpeg';
+import Quality1 from './assets/icons/quality-1.svg';
+import Quality2 from './assets/icons/quality-2.svg';
+import Quality3 from './assets/icons/quality-3.svg';
 
 function homePage() {
   const homeContent = document.createElement('div');
@@ -16,7 +16,7 @@ function homePage() {
   const h1 = document.createElement('h1');
   h1.textContent = 'Kainan Co.';
   const p1 = document.createElement('p');
-  p1.textContent = '(noun) Filipino; eating place';
+  p1.textContent = '(noun) Filipino translation of eating place';
   div1.appendChild(h1);
   div1.appendChild(p1);
   imageHeader.appendChild(div1);
@@ -24,19 +24,19 @@ function homePage() {
 
   // for #about
   const about = document.createElement('section');
+  const aboutImage = new Image();
+  aboutImage.src = About;
+  aboutImage.alt = 'Filipino breakfast';
+  about.appendChild(aboutImage);
   about.setAttribute('id', 'about');
   const div2 = document.createElement('div');
   const aboutHeader = document.createElement('h2');
   aboutHeader.textContent = 'Quality Filipino cuisine since 2022';
   const p2 = document.createElement('p');
-  p2.textContent = 'Our ingredients are imported fresh from the Philippines.';
+  p2.textContent = 'Our ingredients are imported fresh from the Philippines. We offer a wide variety of Filipino dishes, from breakfast to dinner. \n\n';
   div2.appendChild(aboutHeader);
   div2.appendChild(p2);
   about.appendChild(div2);
-  const aboutImage = new Image();
-  aboutImage.src = About;
-  aboutImage.alt = 'Filipino breakfast';
-  about.appendChild(aboutImage);
   homeContent.appendChild(about);
 
   // for #qualities
