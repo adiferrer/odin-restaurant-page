@@ -1,6 +1,4 @@
 // import _ from 'lodash';
-import About from './assets/images/about.jpeg';
-import Address from './assets/images/address.jpeg';
 import Quality1 from './assets/icons/quality-1.svg';
 import Quality2 from './assets/icons/quality-2.svg';
 import Quality3 from './assets/icons/quality-3.svg';
@@ -10,7 +8,7 @@ function homePage() {
   homeContent.setAttribute('id', 'home-content');
 
   // for #image-header
-  const imageHeader = document.createElement('section');
+  const imageHeader = document.createElement('div');
   imageHeader.setAttribute('id', 'image-header');
   const div1 = document.createElement('div');
   const h1 = document.createElement('h1');
@@ -24,10 +22,6 @@ function homePage() {
 
   // for #about
   const about = document.createElement('section');
-  const aboutImage = new Image();
-  aboutImage.src = About;
-  aboutImage.alt = 'Filipino breakfast';
-  about.appendChild(aboutImage);
   about.setAttribute('id', 'about');
   const div2 = document.createElement('div');
   const aboutHeader = document.createElement('h2');
@@ -79,10 +73,6 @@ function homePage() {
   // for #address
   const address = document.createElement('section');
   address.setAttribute('id', 'address');
-  const addressImage = new Image();
-  addressImage.src = Address;
-  addressImage.alt = 'Stone house';
-  address.appendChild(addressImage);
   const div4 = document.createElement('div');
   const addressHeader = document.createElement('h2');
   addressHeader.textContent = 'Visit us today!';
