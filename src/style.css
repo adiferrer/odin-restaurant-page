@@ -330,7 +330,8 @@ footer > a:hover {
         text-align: center;
     }
 
-    #menu-content > div {
+    #menu-content > div,
+    #contact-content > div {
         padding: 2em 2em 0;
     }
 
