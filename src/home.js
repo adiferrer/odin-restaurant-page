@@ -27,7 +27,9 @@ function homePage() {
   const aboutHeader = document.createElement('h2');
   aboutHeader.textContent = 'Quality Filipino cuisine since 2022';
   const p2 = document.createElement('p');
-  p2.textContent = 'Our ingredients are imported fresh from the Philippines. We offer a wide variety of Filipino dishes, from breakfast to dinner. \n\n';
+  p2.appendChild(document.createTextNode('Kainan Co. is a Filipino restaurant located in Calgary, Alberta. Founded and run by university students, we serve traditional Filipino dishes with a modern twist.'));
+  p2.appendChild(document.createElement('br'));
+  p2.appendChild(document.createTextNode('With ingredients imported fresh from the Philippines, we offer a wide variety of Filipino dishes. Our menu is inspired by the food we grew up eating, and we\'re excited to share it with you.'));
   div2.appendChild(aboutHeader);
   div2.appendChild(p2);
   about.appendChild(div2);
@@ -70,18 +72,15 @@ function homePage() {
   qualities.appendChild(div3);
   homeContent.appendChild(qualities);
 
-  // for #address
-  const address = document.createElement('section');
-  address.setAttribute('id', 'address');
+  // for #faq
+  const faq = document.createElement('section');
+  faq.setAttribute('id', 'faq');
   const div4 = document.createElement('div');
   const addressHeader = document.createElement('h2');
-  addressHeader.textContent = 'Visit us today!';
-  const p3 = document.createElement('p');
-  p3.textContent = 'We\'re located at 1234 Main St. in the heart of downtown. We\'re open from 8am to 8pm every day. We look forward to seeing you!';
+  addressHeader.textContent = 'Frequently Asked Questions';
   div4.appendChild(addressHeader);
-  div4.appendChild(p3);
-  address.appendChild(div4);
-  homeContent.appendChild(address);
+  faq.appendChild(div4);
+  homeContent.appendChild(faq);
 
   return homeContent;
 }

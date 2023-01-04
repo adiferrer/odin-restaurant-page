@@ -117,7 +117,7 @@ h2 {
 #image-header,
 #about,
 #qualities,
-#address {
+#faq {
     height: 80vh;
 }
 
@@ -139,14 +139,14 @@ h2 {
 }
 
 #about,
-#address {
+#faq {
     display: flex;
     align-items: center;
     padding: 3em;
 }
 
 #about > div > p,
-#address > div > p {
+#faq > div > p {
     font-size: 1.2rem;
     line-height: 1.5;
 }
@@ -234,6 +234,7 @@ hr {
 
 #menu-content h3 {
     text-decoration: underline;
+    text-align: center;
 }
 
 /* contact page content */
@@ -249,7 +250,11 @@ hr {
     gap: 1rem;
 }
 
-#contact-content > section > ul > li > img {
+#contact-content > section:first-of-type > img {
+    width: calc(100vw - 50vw);
+}
+
+#contact-content > section > ul > li > img {    
     filter: invert(73%) sepia(8%) saturate(1240%) hue-rotate(356deg) brightness(99%) contrast(82%);
 }
 
@@ -293,20 +298,20 @@ footer > a:hover {
     }
 
     #about,
-    #address {
+    #faq {
         flex-direction: column;
         align-items: center;
     }
 
     #about > img,
-    #address > img {
+    #faq > img {
         width: calc(100vw - 50vw);
         height: calc(100vw - 50vw);
         object-fit: cover;
     }
 
     #about > div > h2,
-    #address > div > h2,
+    #faq > div > h2,
     #qualities > h2 {
         font-size: 1.7em;
         text-align: center;
@@ -348,6 +353,10 @@ footer > a:hover {
 
     #menu-content > section > ul > li:hover {
         transform: scale(1.1);
+    }
+
+    #menu-content h3 {
+        text-align: left;
     }
 }
 
