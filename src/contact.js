@@ -15,6 +15,7 @@ function contactPage() {
   const header = document.createElement('h1');
   header.textContent = 'Contact Us!';
   headerSection.appendChild(header);
+  headerSection.appendChild(document.createElement('hr'));
   contactContent.appendChild(headerSection);
 
   const mapSection = document.createElement('section');

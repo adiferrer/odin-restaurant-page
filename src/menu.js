@@ -99,11 +99,12 @@ function menuPage() {
       menuSectionHeader.textContent = 'Desserts';
       menuSectionContent.appendChild(menuSectionHeader);
       iterateItems(desserts, menuSectionContent);
-    } else if (i === 5) {
-      menuSectionHeader.textContent = 'Special Edition Items';
-      menuSectionContent.appendChild(menuSectionHeader);
-      // iterateItems(specialOffers, menuSectionContent);
     }
+    // else if (i === 5) {
+    //   menuSectionHeader.textContent = 'Special Edition Items';
+    //   menuSectionContent.appendChild(menuSectionHeader);
+    //   iterateItems(specialOffers, menuSectionContent);
+    // }
     menuContent.appendChild(menuSectionContent);
   }
 
