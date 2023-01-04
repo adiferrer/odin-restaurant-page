@@ -1,4 +1,5 @@
 # Odin Restaurant Page
+![](restaurant-page-ss.png)
 Disclaimer: Location and all contact details are made up just for the purpose of fulfilling the project requirements.
 
 ## Kainan Co.
