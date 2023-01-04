@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 // import images
 import SideDish1 from './assets/images/lumpia.jpeg';
 import SideDish2 from './assets/images/assorted-bbq.jpeg';
